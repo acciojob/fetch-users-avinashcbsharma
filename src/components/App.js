@@ -35,19 +35,9 @@ export default function App () {
           Get User List
         </button>
       </div>
-      {isvissible && (
-        <div className='title flx'>
-          <p>First Name</p>
-          <p>Last Name</p>
-          <p>Email</p>
-          <p>Avtar</p>
-        </div>
-      )}
-      {isvissible && <p className='flx loding'>No data found to display</p>}
       {err && <p>{err}</p>}
       
-      <table id="table1" >
-      {!isvissible && (
+      <table id="table1" >      
         <thead>
           <tr>                        
             <th>First Name</th>
@@ -56,7 +46,6 @@ export default function App () {
             <th>Avatar</th>
           </tr>
         </thead>
-      )}
         <tbody>
         {
           users.map(function(item){
@@ -72,6 +61,7 @@ export default function App () {
         }
         </tbody>
       </table>      
+      {isvissible && <p className='flx loding'>No data found to display</p>}
     </div>
   )
 }
