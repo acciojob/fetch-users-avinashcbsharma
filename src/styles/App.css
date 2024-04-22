@@ -9,10 +9,6 @@ body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.loding{
-    justify-content: center;
-    font-weight: 700;
-}
 .btn{
     max-width: 120px;
     background-color: rgb(43, 121, 143);
@@ -29,8 +25,7 @@ body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     height: 50px;
 }
 table { 
-    border-collapse: collapse; 
-    
+    border-collapse: collapse;    
     text-align: left;
 } 
 tr{
@@ -52,3 +47,7 @@ th{
     table-layout: auto; 
     width: 100%;
 } 
+.loding{ 
+    font-weight: 700;
+    justify-content: center;
+}
