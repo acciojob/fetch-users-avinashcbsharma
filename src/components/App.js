@@ -2,30 +2,22 @@ import React, { useState } from 'react'
 import axios from 'axios'
 
 export default function App () {
-  const [isvissible, setIsvissible] = useState(true)
   const [users, setUsers] = useState([])
   const [err, setErr] = useState('')
 
-  // useEffect(()=>{
     let fetchoperation = async () => {
       await axios({
-        url: 'https://reqres.in/api/users',
+        url: 'https://reqres.in/api/users/99',
         module: 'Get'
       })
         .then(response => {
-          let res = JSON.stringify(response.data.data)
-          setIsvissible(false)
           setUsers(response.data.data);
-          console.log('Fetched Data: ', res);
-          console.log('Fetched Data: ', response.data.data)
         })
         .catch(function (error) {
           let err = JSON.stringify(error.message)
-          console.log(err)
           setErr(err)
         })
     }
-  // },[])
 
   return (
     <div id='container'>
@@ -35,7 +27,6 @@ export default function App () {
           Get User List
         </button>
       </div>
-      {err && <p>{err}</p>}
       
       <table id="table1" >      
         <thead>
@@ -61,7 +52,7 @@ export default function App () {
         }
         </tbody>
       </table>      
-      {isvissible && <p className='flx loding'>No data found to display</p>}
+      {err &&  <p className='flx loding'>No data found to display</p>}      
     </div>
   )
 }
