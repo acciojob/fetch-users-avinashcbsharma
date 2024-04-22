@@ -9,15 +9,6 @@ body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.title{
-    min-width: 10%;
-    justify-content:space-between;
-    padding: 0rem 1rem 0rem 1rem;
-    background-color: rgb(39, 43, 44);
-    color:#ffff;
-    font-size: 16px;
-    font-weight: 600;
-}
 .loding{
     justify-content: center;
     font-weight: 700;
@@ -33,7 +24,6 @@ body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 .btn:hover{
     background-color: rgb(23, 94, 113);
 }
-
 .sr{
     width: 50px;
     height: 50px;
@@ -56,9 +46,9 @@ th{
     border:2px solid rgb(39, 43, 44);
     color:#ffff;
     font-size: 16px;
-    font-weight: 600;
-    
+    font-weight: 600;    
 }
 #table1 { 
     table-layout: auto; 
+    width: 100%;
 } 
