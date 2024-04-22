@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default function App () {
   const [users, setUsers] = useState([])
-  const [err, setErr] = useState('')
+  // const [err, setErr] = useState('')
 
     let fetchoperation = async () => {
       await axios({
@@ -15,7 +15,7 @@ export default function App () {
         })
         .catch(function (error) {
           let err = JSON.stringify(error.message)
-          setErr(err)
+          // setErr(err)
         })
     }
 
@@ -52,7 +52,7 @@ export default function App () {
         }
         </tbody>
       </table>      
-      {err &&  <p className='flx loding'>No data found to display</p>}      
+      // {err &&  <p className='flx loding'>No data found to display</p>}      
     </div>
   )
 }
